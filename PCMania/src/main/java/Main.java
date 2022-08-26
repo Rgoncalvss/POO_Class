@@ -34,13 +34,15 @@ public class Main {
             switch (menu)
             {
                 case 0:
+                    System.out.println("O cliente " + cliente.nome + " adquiriu: ");
+                    System.out.println(" ");
                     for(Computador pc : cliente.computadores){
                         if(pc != null)
                             pc.mostraPCConfigs();
                     }
-                    System.out.println("Total da compra: " + cliente.calculaTotalCompra());
+                    System.out.println("Total da compra: R$" + cliente.calculaTotalCompra());
                     aux = false;
-                    System.out.println("Voce saiu");
+                    System.out.println("Agradecemos pela compra!");
 
                     break;
 
@@ -54,6 +56,8 @@ public class Main {
                     pc1.hardwareBasico.capacidade = 500f;
                     pc1.sistemaOperacional.nome = "Linux Ubuntu";
                     pc1.sistemaOperacional.tipo = 32;
+                    pc1.memoriaUSB.nome = "Pen-drive";
+                    pc1.memoriaUSB.capacidade = 16;
                     cliente.computadores[i] = pc1;
                     i++;
                     System.out.println("Computador da Positivo no carrinho!");
@@ -65,9 +69,11 @@ public class Main {
                     pc2.preco = 1800f;
                     pc2.hardwareBasico.processador = "Pentium Core i5 (2260 Mhz)";
                     pc2.hardwareBasico.memoria = "8Gb";
-                    pc2.hardwareBasico.capacidade = 1f;
+                    pc2.hardwareBasico.capacidade = 1000f;
                     pc2.sistemaOperacional.nome = "Windows 8";
                     pc2.sistemaOperacional.tipo = 64;
+                    pc2.memoriaUSB.nome = "Pen-drive";
+                    pc2.memoriaUSB.capacidade = 32;
                     cliente.computadores[i] = pc2;
                     i++;
                     System.out.println("Computador da Acer no carrinho!");
@@ -79,9 +85,11 @@ public class Main {
                     pc3.preco = 2800f;
                     pc3.hardwareBasico.processador = "Pentium Core i7(3500 Mhz)";
                     pc3.hardwareBasico.memoria = "16Gb";
-                    pc3.hardwareBasico.capacidade = 1f;
+                    pc3.hardwareBasico.capacidade = 2000f;
                     pc3.sistemaOperacional.nome = "Windows 10";
                     pc3.sistemaOperacional.tipo = 64;
+                    pc3.memoriaUSB.nome = "HD Externo";
+                    pc3.memoriaUSB.capacidade = 1000;
                     cliente.computadores[i] = pc3;
                     i++;
                     System.out.println("Computador da Acer no carrinho!");
